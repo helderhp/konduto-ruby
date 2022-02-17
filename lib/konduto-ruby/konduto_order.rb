@@ -10,6 +10,7 @@ class KondutoOrder < KondutoBase
   has_one :device
   has_one :geolocation
   has_one :navigation
+  has_one :delivery
 
   attributes :id, :visitor, :timestamp, :total_amount, :tax_amount, :currency, :installments,
              :ip, :score, :analyze, :messages_exchanged, :shipping_amount
