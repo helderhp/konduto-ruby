@@ -1,5 +1,5 @@
 FactoryGirl.define do
-  factory :konduto_navigation_info do
+  factory :konduto_navigation do
     session_time 12
     referrer 'http://www.google.com?q=buy+shirt'
     time_since_last_sale 4
