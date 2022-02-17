@@ -7,7 +7,7 @@ FactoryGirl.define do
       destination_city 'Rio de Janeiro'
       klass :economy
       number_of_connections 0
-      date Date.new(2015, 5, 7)
+      date '2015-05-07'
       fare_basis 'Y'
     end
 
@@ -18,7 +18,7 @@ FactoryGirl.define do
       destination_city 'São Paulo'
       klass :economy
       number_of_connections 0
-      date Date.new(2015, 5, 7)
+      date '2015-05-07'
       fare_basis 'Y'
     end
   end

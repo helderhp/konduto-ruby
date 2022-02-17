@@ -53,7 +53,7 @@ order = KondutoOrder.new({
           totalAmount: 123.4,
           customer: customer # customer is an instance of KondutoCustomer
         })
-```		
+```
 One can also use the more conventional set-based approach as seen below.
 
 ```ruby
@@ -161,6 +161,15 @@ Parameter | Description
 id | _(required)_ Seller's id
 name | _(optional)_ Sellers's name
 created_at | _(optional)_ Date when the seller was created
+
+### Delivery
+
+Parameter | Description
+--- | ---
+delivery_company | _(required)_ Name of the company that will deliver the product
+delivery_method | _(optional)_ Delivery Method
+estimated_shipping_date | _(optional)_ Estimated product shipping date
+estimated_delivery_date | _(optional)_ Estimated product delivery date
 
 
 ## Sending an order for analysis.

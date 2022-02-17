@@ -5,7 +5,7 @@ module Konduto
       name = options[:alias] || model
 
       self.send(:define_method, name) do
-        instance_variable_get("@#{name}")
+        instance_variable_get("@#{name}") if instance_variable_defined?("@#{name}")
       end
 
       self.send(:define_method, "#{name}=".to_sym) do |value|
@@ -25,7 +25,7 @@ module Konduto
       name = options[:alias] || model
 
       self.send(:define_method, name) do
-        instance_variable_get("@#{name}")
+        instance_variable_get("@#{name}") if instance_variable_defined?("@#{name}")
       end
 
       self.send(:define_method, "#{name}=".to_sym) do |arr|

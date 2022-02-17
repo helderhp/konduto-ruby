@@ -6,6 +6,8 @@ module Konduto
           klass = attribute.values[0].to_s.gsub(/_/, ' ').split.map(&:capitalize).join('')
           type = Object::const_get(klass)
           name = attribute.keys[0]
+
+          define_strftime_pattern(self, name, attribute[:strftime_pattern]) if attribute.has_key?(:strftime_pattern)
         else
           name = attribute
         end
@@ -22,11 +24,17 @@ module Konduto
         end
 
         self.send(:define_method, name) do
-          instance_variable_get("@#{name.to_s.gsub(/[?|!]$/, '')}")
+          instance_variable_get("@#{name.to_s.gsub(/[?|!]$/, '')}") if instance_variable_defined?("@#{name.to_s.gsub(/[?|!]$/, '')}")
         end
       end
     end
 
     alias :attribute :attributes
+
+    def define_strftime_pattern(klass, name, value)
+      klass.send(:define_method, "#{name.to_s.gsub(/[?|!]$/, '')}_strftime_pattern") do
+        value
+      end
+    end
   end
 end

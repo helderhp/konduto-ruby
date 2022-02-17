@@ -4,7 +4,7 @@ module Konduto
   module Validations
     def self.included(base)
       base.class_eval do
-        extend ClassMethods
+        extend Konduto::ClassMethods
       end
     end
 

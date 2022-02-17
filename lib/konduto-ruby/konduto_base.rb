@@ -28,11 +28,17 @@ class KondutoBase
       instance_variables.map do |name|
         value = instance_variable_get(name)
 
+        strftime_pattern = defined_strftime_pattern(name) if defined_strftime_pattern?(name)
+
         if value.respond_to? :each
           value = value.map {|v| v.to_hash }
         elsif !value.instance_variables.empty?
           value = value.to_hash
-        elsif value.is_a?(Date) || value.is_a?(Symbol)
+        elsif value.is_a?(DateTime)
+          value = value.strftime(strftime_pattern || '%Y-%m-%dT%H:%MZ')
+        elsif value.is_a?(Date)
+          value = value.strftime(strftime_pattern || '%Y-%m-%d')
+        elsif value.is_a?(Symbol)
           value = value.to_s
         end
 
@@ -52,5 +58,13 @@ class KondutoBase
     end
 
     true
+  end
+
+  def defined_strftime_pattern?(attr)
+    respond_to? "#{attr.to_s.gsub(/^@/, '')}_strftime_pattern"
+  end
+
+  def defined_strftime_pattern(attr)
+    send("#{attr.to_s.gsub(/^@/, '')}_strftime_pattern")
   end
 end

@@ -15,8 +15,8 @@ class KondutoOrder < KondutoBase
   attributes :id, :visitor, :timestamp, :total_amount, :tax_amount, :currency, :installments,
              :ip, :score, :analyze, :messages_exchanged, :shipping_amount
 
-  attribute first_message: :date_time
-  attribute purchased_at: :date_time
+  attribute first_message: :date_time, strftime_pattern: '%Y-%m-%dT%H:%M:%SZ'
+  attribute purchased_at: :date_time, strftime_pattern: '%Y-%m-%dT%H:%M:%SZ'
   attribute status: :symbol
   attribute recommendation: :symbol
 
