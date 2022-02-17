@@ -29,6 +29,7 @@ FactoryGirl.define do
       purchased_at DateTime.new(2015, 6, 9, 18, 27, 1)
       messages_exchanged 2
       seller factory: :konduto_seller, strategy: :build
+      delivery factory: :konduto_delivery, strategy: :build
     end
   end
 end

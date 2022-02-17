@@ -5,6 +5,10 @@ require 'konduto-ruby'
 class KondutoOrderTest < MiniTest::Test
   include FactoryGirl::Syntax::Methods
 
+  def setup
+    FactoryGirl.reload
+  end
+
   def test_valid
     order = KondutoOrder.new
     assert_equal false, order.valid?, 'order should be invalid without id'
