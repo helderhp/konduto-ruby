@@ -11,24 +11,35 @@
   "first_message": "2015-06-09T18:27:01Z",
   "messages_exchanged": 2,
   "purchased_at": "2015-06-09T18:27:01Z",
+  "recurring": true,
+  "risk_level": "low",
+  "scheduled": false,
+  "recommendation": "approve",
+  "status": "approved",
+  "sales_channel": "e-commerce",
+  "analyze": true,
   "customer": {
     "id": "1",
     "name": "José da Silva",
     "email": "jose.silva@gmail.com",
+    "dob": "1969-07-20",
+    "document_type": "cpf",
     "tax_id": "01234567890",
     "phone1": "11987654321",
     "phone2": "1133333333",
     "vip": false,
     "new": false,
-    "created_at": "2015-06-09"
+    "created_at": "2015-06-09",
+    "type": "A1",
+    "risk_level": "low",
+    "risk_score": 0.5,
+    "mother_name": "Maria Silva"
   },
-  "recommendation": "approve",
   "geolocation": {
     "city": "São Paulo",
     "state": "SP",
     "country": "BR"
   },
-  "analyze": true,
   "shipping": {
     "name": "Konduto",
     "address1": "R. Teodoro Sampaio, 2393",
@@ -36,7 +47,9 @@
     "zip": "05406-200",
     "city": "São Paulo",
     "state": "SP",
-    "country": "BR"
+    "country": "BR",
+    "lat": -23.565779450573725,
+    "lon": -46.691031683668946
   },
   "billing": {
     "name": "Konduto",
@@ -45,7 +58,9 @@
     "zip": "05406-200",
     "city": "São Paulo",
     "state": "SP",
-    "country": "BR"
+    "country": "BR",
+    "lat": -23.565779450573725,
+    "lon": -46.691031683668946
   },
   "payment": [
     {
@@ -53,7 +68,18 @@
       "last4": "1234",
       "expiration_date": "012014",
       "status": "approved",
-      "type": "credit"
+      "type": "credit",
+      "amount": 100.65,
+      "sha1": "4sd52es5d8qu74fdc96d5f2yd8a5f2s5d7h4ec8s",
+      "cvv_result": "valid",
+      "avs_result": "ok",
+      "number_of_retries": 1,
+      "card_bearer_tax_id": "12345678990"
+    },
+    {
+      "type":"voucher",
+      "amount":10.0,
+      "description":"Desconto de 10%"
     }
   ],
   "shopping_cart": [
@@ -64,7 +90,10 @@
       "name": "Green T-Shirt",
       "description": "Male Green T-Shirt V Neck",
       "unit_cost": 1999.99,
-      "quantity": 1
+      "quantity": 1,
+      "discount": -10.99,
+      "image": "https://product_image.test.com/123456789999.png",
+      "created_at": "2022-04-25"
     },
     {
       "sku": "0017273",
@@ -79,40 +108,42 @@
   ],
   "travel": {
     "type": "flight",
-    "departure": {
-      "origin_airport": "CGH",
-      "destination_airport": "SDU",
-      "origin_city": "São Paulo",
-      "destination_city": "Rio de Janeiro",
-      "date": "2015-05-07T00:00Z",
-      "number_of_connections": 0,
+    "expiration_date": "2022-05-12T15:25:30",
+    "departure":{
+      "origin_airport": "GRU",
+      "destination_airport": "FOR",
+      "origin_city": "Guarulhos - SP",
+      "destination_city": "Fortaleza - CE",
+      "date": "2022-05-01",
       "class": "economy",
-      "fare_basis": "Y"
+      "number_of_connections": 0,
+      "fare_basis": "A1",
+      "company": "Gol"
     },
-    "return": {
-      "origin_airport": "SDU",
-      "destination_airport": "CGH",
-      "origin_city": "Rio de Janeiro",
-      "destination_city": "São Paulo",
-      "date": "2015-05-07T00:00Z",
-      "number_of_connections": 0,
+    "return":{
+      "origin_airport": "FOR",
+      "destination_airport": "GRU",
+      "origin_city": "Fortaleza - CE",
+      "destination_city": "Guarulhos - SP",
+      "date": "2022-05-12",
       "class": "economy",
-      "fare_basis": "Y"
+      "number_of_connections": 0,
+      "fare_basis": "A1",
+      "company": "Gol"
     },
     "passengers": [
       {
-        "name": "Milton Tavares 1",
-        "document": "A1B2C3D1",
-        "document_type": "passport",
-        "frequent_traveler": false,
-        "special_needs": false
-      },
-      {
-        "name": "Milton Tavares 2",
-        "document": "A1B2C3D2",
-        "document_type": "passport",
-        "frequent_traveler": false,
-        "special_needs": false
+        "name":"Júlia da Silva",
+        "document": "A1B2C3D4",
+        "document_type": "id",
+        "dob": "1970-01-01",
+        "nationality": "BR",
+        "frequent_traveler": true,
+        "special_needs": false,
+        "loyalty": {
+          "program": "advantage",
+          "category": "gold"
+        }
       }
     ]
   },
@@ -121,11 +152,178 @@
     "name": "Seller Name",
     "created_at": "2015-06-09"
   },
-  "status": "approved",
   "delivery": {
     "delivery_company": "GFL",
     "delivery_method": "retira_loja",
     "estimated_shipping_date": "2021-05-06",
     "estimated_delivery_date": "2021-05-06"
+  },
+  "hotel": {
+    "name": "Hotel Konduto",
+    "address1": "Rod Três, 46",
+    "address2": "Vidinha",
+    "city": "Pouso Alto",
+    "state": "MG",
+    "zip": "12345-123",
+    "country": "BR",
+    "category": "Gold",
+    "rooms": [
+      {
+        "number": "201A",
+        "code": "25487",
+        "type": "A1",
+        "check_in_date": "2022-02-14",
+        "check_out_date": "2022-03-01",
+        "number_of_guests": 1,
+        "board_basis": "economy",
+        "guests": [
+          {
+            "name": "João Silva",
+            "document": "12345678990",
+            "document_type": "cpf",
+            "dob": "1985-05-08",
+            "nationality": "BR"
+          }
+        ]
+      }
+    ]
+  },
+  "options": {
+    "real_time": true,
+    "sales_channel": "web"
+  },
+  "vehicle": {
+    "vid": "1d2f5g4s5d2fd5a4s",
+    "renavam": "12345678932",
+    "registration": "987852468521478",
+    "make": "Bentley",
+    "model": "Bacalar",
+    "owner": {
+      "tax_id": "540.830.640-21",
+      "name": "Cicero"
+    },
+    "type": "car",
+    "usage": "private"
+  },
+  "events":[
+    {
+      "name":"Tia Ana no Maracanã",
+      "date":"2021-01-01T03:00:00Z",
+      "type":"show",
+      "subtype":"sertanejo",
+      "venue":{
+        "name":"Estádio do Maracanã",
+        "capacity":80000,
+        "address":"Av. Maracanã s/n",
+        "city":"Rio de Janeiro",
+        "state":"RJ",
+        "country":"BR"
+      },
+      "tickets":[
+        {
+          "id": "123456",
+          "category":"regular",
+          "premium":true,
+          "section":"Pista Premium",
+          "attendee":{
+            "document":"123456789",
+            "document_type":"cpf",
+            "dob":"1990-10-28"
+          }
+        }
+      ]
+    },
+    {
+      "name":"Heat @ Knicks",
+      "date":"2020-11-21T01:00:00Z",
+      "type":"sports",
+      "subtype":"NBA",
+      "tickets":[
+        {
+          "category":"regular",
+          "section":"General",
+          "premium":true
+        },
+        {
+          "category":"regular",
+          "section":"General",
+          "premium":true
+        }
+      ]
+    }
+  ],
+  "point_of_sale":{
+    "id":"000500",
+    "name":"Capital Representações",
+    "lat":-23.5677666,
+    "long":-46.6487763,
+    "address":"Rua Dez de Abril, 23",
+    "city":"São Paulo",
+    "state":"SP",
+    "zip":"01001-001",
+    "country":"BR"
+  },
+  "external_device": {
+    "fingerprint": "51asd1asd445asd85d4g98s",
+    "provider": "SDK",
+    "category": "Mobile",
+    "model": "Galaxy S22 Ultra",
+    "platform": "Android",
+    "manufacturer": "Samsung ",
+    "os": "Android 12 Samsung One UI 4.1",
+    "browser": "Chrome 104.0.5112.79",
+    "language": "pt-br"
+  },
+  "origin_account": {
+    "id": "ABC123DEF",
+    "balance": 250.0,
+    "key_type": "pix_phone",
+    "key_value": "+5511912341234",
+    "bank_code": "00000000",
+    "bank_name": "Banco do Brasil",
+    "bank_branch": "0001",
+    "bank_account": "123123",
+    "holder_name": "Alberto Armando",
+    "holder_tax_id": "123.456.789-09"
+  },
+  "destination_accounts": [
+    {
+      "id": "Conta 003",
+      "key_type": "pix_evp",
+      "key_value": "123e4567-e89b-12d3-a456-426655440000",
+      "bank_code": "17298092",
+      "bank_name": "Itaú BBA",
+      "bank_branch": "0001",
+      "bank_account": "01234-5",
+      "holder_name": "José Armando",
+      "holder_tax_id": "123.456-789-09",
+      "amount": 200.0
+    },
+    {
+      "id": "Conta 007",
+      "key_type": "pix_phone",
+      "key_value": "(11) 911112222",
+      "bank_code": "60872504",
+      "bank_name": "Banco Itaú",
+      "bank_branch": "0001",
+      "bank_account": "12345-6",
+      "holder_name": "Laura Armando",
+      "holder_tax_id": "046.123.123-13",
+      "amount": 50.0
+    }
+  ],
+  "tenant": {
+    "id": "548btm",
+    "name": "Tenant",
+    "created_at": "2022-02-12T12:52:00"
+  },
+  "agent": {
+    "id":"28372",
+    "login":"julia.silva",
+    "name":"Júlia da Silva",
+    "tax_id":"12345678909",
+    "dob":"1970-12-25",
+    "category":"",
+    "created_at":"2010-12-25"
   }
 }
