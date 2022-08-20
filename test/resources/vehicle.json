@@ -1,0 +1,13 @@
+{
+  "vid": "1d2f5g4s5d2fd5a4s",
+  "renavam": "12345678932",
+  "registration": "987852468521478",
+  "make": "Bentley",
+  "model": "Bacalar",
+  "owner": {
+    "tax_id": "540.830.640-21",
+    "name": "Cicero"
+  },
+  "type": "car", //todo verificar enum
+  "usage": "private"
+}
