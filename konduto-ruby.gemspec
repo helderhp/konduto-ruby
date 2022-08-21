@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.homepage     = 'https://github.com/konduto/konduto-ruby'
   spec.summary      = ''
   spec.description  = 'A wrapper for konduto antifraud API'
-  spec.required_ruby_version = Gem::Requirement.new('>= 2.6.0')
+  spec.required_ruby_version = Gem::Requirement.new('>= 2.7.0')
 
   spec.files        = Dir["{lib}/**/*.rb", "bin/*", "LICENSE", "*.md"]
   spec.require_path = 'lib'

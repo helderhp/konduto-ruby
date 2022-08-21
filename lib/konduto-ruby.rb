@@ -1,7 +1,7 @@
 require 'json'
 require 'date'
-require 'konduto-ruby/konduto_base'
-require 'konduto-ruby/konduto_travel_leg'
+require_relative 'konduto-ruby/konduto_base'
+require_relative 'konduto-ruby/konduto_travel_leg'
 
 Dir[__dir__ + '/konduto-ruby/*.rb'].each { |file| require file }
 
