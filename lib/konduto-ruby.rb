@@ -12,6 +12,8 @@ class KondutoRuby
   attr_accessor :request_body, :response_body, :endpoint
   attr_reader :api_key
 
+  VERSION = '2.2.0'
+
   def initialize api_key, endpoint = 'https://api.konduto.com/v1'
     @endpoint = URI.parse(endpoint)
     @http_client = Net::HTTP.new(@endpoint.host, @endpoint.port)
