@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class KondutoPassenger < KondutoBase
   attributes :name, :document, :nationality, :frequent_traveler, :special_needs, \
              :loyalty, :loyalty_program, :loyalty_category

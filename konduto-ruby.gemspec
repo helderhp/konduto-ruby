@@ -1,5 +1,6 @@
-require_relative 'lib/konduto-ruby'
+# frozen_string_literal: true
 
+require_relative 'lib/konduto-ruby'
 
 Gem::Specification.new do |spec|
   spec.name         = 'konduto-ruby'
@@ -11,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.description  = 'A wrapper for konduto antifraud API'
   spec.required_ruby_version = Gem::Requirement.new('>= 2.7.0')
 
-  spec.files        = Dir["{lib}/**/*.rb", "bin/*", "LICENSE", "*.md"]
+  spec.files        = Dir['{lib}/**/*.rb', 'bin/*', 'LICENSE', '*.md']
   spec.require_path = 'lib'
 
   spec.license      = 'MIT'

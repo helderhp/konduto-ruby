@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class KondutoOrder < KondutoBase
   has_many :item, alias: :shopping_cart
   has_many :payment

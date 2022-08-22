@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'minitest/autorun'
 require 'factory_girl'
 
@@ -8,6 +10,6 @@ class KondutoPaymentTest < MiniTest::Test
     payment = build_list(:konduto_payment, 1, :credit_card)
     payment_json = load_resource('payments.json')
 
-    assert_equal payment_json, payment.map { |value| value.to_hash }, 'serialization failed'
+    assert_equal payment_json, payment.map(&:to_hash), 'serialization failed'
   end
 end

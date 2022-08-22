@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class KondutoFlightLeg < KondutoTravelLeg
   attributes :origin_airport, :origin_city, :destination_airport, :destination_city
   validates_presence_of :origin_airport, :destination_airport
