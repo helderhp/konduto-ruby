@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 FactoryGirl.define do
   factory :konduto_flight_leg do
     trait :departure_flight do

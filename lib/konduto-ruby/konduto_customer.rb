@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class KondutoCustomer < KondutoBase
   attributes :id, :name, :email, :new?, :vip?, :phone1, :phone2, :tax_id
   attribute created_at: :date

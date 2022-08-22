@@ -1,22 +1,24 @@
+# frozen_string_literal: true
+
 require 'date'
 
 FactoryGirl.define do
   factory :konduto_order do
-    id "1"
+    id '1'
     total_amount 120.5
 
     customer factory: :konduto_customer, strategy: :build
 
     trait :complete do
       analyze true
-      visitor "a9031kdlas"
+      visitor 'a9031kdlas'
       currency 'USD'
       installments 1
       ip '192.168.0.1'
       shipping_amount 5.0
       tax_amount 3.0
-      timestamp 123123123123
-      customer factory: [:konduto_customer, :complete], strategy: :build
+      timestamp 123_123_123_123
+      customer factory: %i[konduto_customer complete], strategy: :build
       shipping factory: :konduto_address, strategy: :build
       billing factory: :konduto_address, strategy: :build
       geolocation factory: :konduto_geolocation, strategy: :build

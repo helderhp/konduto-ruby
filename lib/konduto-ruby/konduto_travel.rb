@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class KondutoTravel < KondutoBase
   has_one :flight_leg, alias: :departure
   has_one :flight_leg, alias: :return
