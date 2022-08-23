@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
 class KondutoPayment < KondutoBase
-  attributes :expiration_date, :bin, :last4
+  attributes :expiration_date, :bin, :last4, :amount, :sha1, :cvv_result,
+             :avs_result, :number_of_retries, :card_bearer_tax_id, :description
   attribute type: :symbol
   attribute status: :symbol
 
