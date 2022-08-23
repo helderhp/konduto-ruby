@@ -12,6 +12,9 @@ FactoryGirl.define do
       description 'Male Green T-Shirt V Neck'
       unit_cost 1999.99
       quantity 1.0
+      discount -10.99
+      image "https://product_image.test.com/123456789999.png"
+      created_at Date.new(2022, 4, 25)
     end
 
     trait :yellow_socks do
