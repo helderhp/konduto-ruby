@@ -1,3 +1,4 @@
+#!/bin/sh
 rvm use ruby-2.7.0@konduto-ruby
 gem uninstall konduto-ruby
 bundle install
