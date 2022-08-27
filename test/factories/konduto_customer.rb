@@ -17,10 +17,10 @@ FactoryGirl.define do
       created_at Date.new(2015, 6, 9)
       dob Date.new(1969, 7, 20)
       document_type 'cpf'
-      type "A1"
-      risk_level "low"
+      type 'A1'
+      risk_level 'low'
       risk_score 0.5
-      mother_name "Maria Silva"
+      mother_name 'Maria Silva'
     end
   end
 end
