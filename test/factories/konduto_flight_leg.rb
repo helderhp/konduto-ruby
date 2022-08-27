@@ -11,6 +11,7 @@ FactoryGirl.define do
       number_of_connections 0
       date '2015-05-07'
       fare_basis 'Y'
+      company 'Gol'
     end
 
     trait :return_flight do
@@ -22,6 +23,7 @@ FactoryGirl.define do
       number_of_connections 0
       date '2015-05-07'
       fare_basis 'Y'
+      company 'Gol'
     end
   end
 end

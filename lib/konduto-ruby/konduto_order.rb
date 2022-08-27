@@ -3,6 +3,8 @@
 class KondutoOrder < KondutoBase
   has_many :item, alias: :shopping_cart
   has_many :payment
+  has_many :destination_account, alias: :destination_accounts
+  has_many :event, alias: :events
 
   has_one :address, alias: :shipping
   has_one :address, alias: :billing
@@ -13,9 +15,18 @@ class KondutoOrder < KondutoBase
   has_one :geolocation
   has_one :navigation
   has_one :delivery
+  has_one :agent
+  has_one :origin_account
+  has_one :external_device
+  has_one :options
+  has_one :point_of_sale
+  has_one :tenant
+  has_one :vehicle
+  has_one :hotel
 
   attributes :id, :visitor, :timestamp, :total_amount, :tax_amount, :currency, :installments,
-             :ip, :score, :analyze, :messages_exchanged, :shipping_amount
+             :ip, :score, :analyze, :messages_exchanged, :shipping_amount, :recurring, :risk_level,
+             :sales_channel, :scheduled
 
   attribute first_message: :date_time, strftime_pattern: '%Y-%m-%dT%H:%M:%SZ'
   attribute purchased_at: :date_time, strftime_pattern: '%Y-%m-%dT%H:%M:%SZ'
