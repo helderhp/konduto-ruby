@@ -75,11 +75,6 @@
       "avs_result": "ok",
       "number_of_retries": 1,
       "card_bearer_tax_id": "12345678990"
-    },
-    {
-      "type":"voucher",
-      "amount":10.0,
-      "description":"Desconto de 10%"
     }
   ],
   "shopping_cart": [
@@ -90,7 +85,7 @@
       "name": "Green T-Shirt",
       "description": "Male Green T-Shirt V Neck",
       "unit_cost": 1999.99,
-      "quantity": 1,
+      "quantity": 1.0,
       "discount": -10.99,
       "image": "https://product_image.test.com/123456789999.png",
       "created_at": "2022-04-25"
@@ -101,7 +96,7 @@
       "name": "Yellow Socks",
       "description": "Pair of Yellow Socks",
       "unit_cost": 29.9,
-      "quantity": 2,
+      "quantity": 2.0,
       "discount": 5.0,
       "created_at": "2015-06-09"
     }
@@ -110,26 +105,26 @@
     "type": "flight",
     "expiration_date": "2022-05-12T15:25:30",
     "departure":{
-      "origin_airport": "GRU",
-      "destination_airport": "FOR",
-      "origin_city": "Guarulhos - SP",
-      "destination_city": "Fortaleza - CE",
-      "date": "2022-05-01",
       "class": "economy",
+      "company": "Gol",
+      "date": "2015-05-07T00:00Z",
+      "destination_airport": "SDU",
+      "destination_city": "Rio de Janeiro",
+      "fare_basis": "Y",
       "number_of_connections": 0,
-      "fare_basis": "A1",
-      "company": "Gol"
+      "origin_airport": "CGH",
+      "origin_city": "São Paulo"
     },
     "return":{
-      "origin_airport": "FOR",
-      "destination_airport": "GRU",
-      "origin_city": "Fortaleza - CE",
-      "destination_city": "Guarulhos - SP",
-      "date": "2022-05-12",
       "class": "economy",
+      "company": "Gol",
+      "date": "2015-05-07T00:00Z",
+      "destination_airport": "CGH",
+      "destination_city": "São Paulo",
+      "fare_basis": "Y",
       "number_of_connections": 0,
-      "fare_basis": "A1",
-      "company": "Gol"
+      "origin_airport": "SDU",
+      "origin_city": "Rio de Janeiro"
     },
     "passengers": [
       {
@@ -190,12 +185,12 @@
   },
   "options": {
     "real_time": true,
-    "sales_channel": "web"
+    "sales_channel": "app"
   },
   "vehicle": {
-    "vid": "1d2f5g4s5d2fd5a4s",
-    "renavam": "12345678932",
-    "registration": "987852468521478",
+    "vid": "5GZCZ43D13S812715",
+    "renavam": "12312312312",
+    "registration": "ABC1234",
     "make": "Bentley",
     "model": "Bacalar",
     "owner": {
@@ -213,7 +208,7 @@
       "subtype":"sertanejo",
       "venue":{
         "name":"Estádio do Maracanã",
-        "capacity":80000,
+        "capacity":8000,
         "address":"Av. Maracanã s/n",
         "city":"Rio de Janeiro",
         "state":"RJ",
@@ -230,24 +225,6 @@
             "document_type":"cpf",
             "dob":"1990-10-28"
           }
-        }
-      ]
-    },
-    {
-      "name":"Heat @ Knicks",
-      "date":"2020-11-21T01:00:00Z",
-      "type":"sports",
-      "subtype":"NBA",
-      "tickets":[
-        {
-          "category":"regular",
-          "section":"General",
-          "premium":true
-        },
-        {
-          "category":"regular",
-          "section":"General",
-          "premium":true
         }
       ]
     }
@@ -298,24 +275,12 @@
       "holder_name": "José Armando",
       "holder_tax_id": "123.456-789-09",
       "amount": 200.0
-    },
-    {
-      "id": "Conta 007",
-      "key_type": "pix_phone",
-      "key_value": "(11) 911112222",
-      "bank_code": "60872504",
-      "bank_name": "Banco Itaú",
-      "bank_branch": "0001",
-      "bank_account": "12345-6",
-      "holder_name": "Laura Armando",
-      "holder_tax_id": "046.123.123-13",
-      "amount": 50.0
     }
   ],
   "tenant": {
     "id": "548btm",
     "name": "Tenant",
-    "created_at": "2022-02-12T12:52:00"
+    "created_at": "2022-02-12T12:52:00Z"
   },
   "agent": {
     "id":"28372",
@@ -323,7 +288,7 @@
     "name":"Júlia da Silva",
     "tax_id":"12345678909",
     "dob":"1970-12-25",
-    "category":"",
+    "category":"vendedor",
     "created_at":"2010-12-25"
   }
 }

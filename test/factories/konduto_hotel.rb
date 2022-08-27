@@ -10,6 +10,6 @@ FactoryGirl.define do
     zip '12345-123'
     country 'BR'
     category 'Gold'
-    rooms { build_list :konduto_room, 2 }
+    rooms { build_list :konduto_room, 1 }
   end
 end

@@ -18,20 +18,34 @@ FactoryGirl.define do
       shipping_amount 5.0
       tax_amount 3.0
       timestamp 123_123_123_123
+      status :approved
+      recommendation :approve
+      first_message DateTime.new(2015, 6, 9, 18, 27, 1)
+      purchased_at DateTime.new(2015, 6, 9, 18, 27, 1)
+      messages_exchanged 2
+      recurring true
+      risk_level 'low'
+      sales_channel 'e-commerce'
+      scheduled false
       customer factory: %i[konduto_customer complete], strategy: :build
       shipping factory: :konduto_address, strategy: :build
       billing factory: :konduto_address, strategy: :build
       geolocation factory: :konduto_geolocation, strategy: :build
-      status :approved
-      recommendation :approve
       payment { build_list :konduto_payment, 1, :credit_card }
       shopping_cart { [build(:konduto_item, :green_shirt), build(:konduto_item, :yellow_socks)] }
       travel factory: :konduto_travel, strategy: :build
-      first_message DateTime.new(2015, 6, 9, 18, 27, 1)
-      purchased_at DateTime.new(2015, 6, 9, 18, 27, 1)
-      messages_exchanged 2
       seller factory: :konduto_seller, strategy: :build
       delivery factory: :konduto_delivery, strategy: :build
+      agent factory: :konduto_agent, strategy: :build
+      origin_account factory: :konduto_origin_account, strategy: :build
+      destination_accounts { build_list :konduto_destination_account, 1 }
+      events { build_list :konduto_event, 1 }
+      external_device factory: :konduto_external_device, strategy: :build
+      hotel factory: :konduto_hotel, strategy: :build
+      options factory: :konduto_options, strategy: :build
+      point_of_sale factory: :konduto_point_of_sale, strategy: :build
+      tenant factory: :konduto_tenant, strategy: :build
+      vehicle factory: :konduto_vehicle, strategy: :build
     end
   end
 end
