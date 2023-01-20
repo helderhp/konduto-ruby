@@ -2,7 +2,7 @@
 
 FactoryGirl.define do
   factory :konduto_triggered_rule do
-    priority -2
+    priority(-2)
     name 'CPFs Monitorados'
     analysis_type 'FRAUD'
     decision 'REVIEW'

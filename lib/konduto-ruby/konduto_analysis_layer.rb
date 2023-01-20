@@ -2,5 +2,5 @@
 
 class KondutoAnalysisLayer < KondutoBase
   attributes :recommendation, :original_recommendation,
-             :is_exploring, :analysis_type , :score
+             :is_exploring, :analysis_type, :score
 end

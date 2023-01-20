@@ -6,7 +6,7 @@ Gem::Specification.new do |spec|
   spec.name         = 'konduto-ruby'
   spec.version      = KondutoRuby::VERSION
   spec.authors      = ['Gabriel Custodio', 'Jonathan Cardoso de Campos', 'Konduto Development Team']
-  spec.date         = Time.now.utc.strftime("%Y-%m-%d")
+  spec.date         = Time.now.utc.strftime('%Y-%m-%d')
   spec.email        = [%(gcmartins93@gmail.com jonathancardosodecampos@gmail.com support@konduto.com)]
   spec.homepage     = 'https://github.com/konduto/konduto-ruby'
   spec.summary      = ''
