@@ -46,6 +46,9 @@ FactoryGirl.define do
       point_of_sale factory: :konduto_point_of_sale, strategy: :build
       tenant factory: :konduto_tenant, strategy: :build
       vehicle factory: :konduto_vehicle, strategy: :build
+      analysis_layers { build_list :konduto_analysis_layer, 1 }
+      triggered_decision_list { build_list :konduto_triggered_decision_list, 1 }
+      triggered_rules { build_list :konduto_triggered_rule, 1 }
     end
   end
 end

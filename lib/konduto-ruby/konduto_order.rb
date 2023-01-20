@@ -5,6 +5,9 @@ class KondutoOrder < KondutoBase
   has_many :payment
   has_many :destination_account, alias: :destination_accounts
   has_many :event, alias: :events
+  has_many :analysis_layer, alias: :analysis_layers
+  has_many :triggered_decision_list, alias: :triggered_decision_list
+  has_many :triggered_rule, alias: :triggered_rules
 
   has_one :address, alias: :shipping
   has_one :address, alias: :billing
