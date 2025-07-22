@@ -5,5 +5,7 @@
   "zip": "05406-200",
   "city": "São Paulo",
   "state": "SP",
-  "country": "BR"
+  "country": "BR",
+  "estimated_date": "2022-02-15T12:00:25Z",
+  "value": 20.0
 }

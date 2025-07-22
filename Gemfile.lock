@@ -54,6 +54,7 @@ GEM
 
 PLATFORMS
   ruby
+  x64-mingw32
 
 DEPENDENCIES
   factory_girl (~> 4.9)
@@ -65,4 +66,4 @@ DEPENDENCIES
   simplecov
 
 BUNDLED WITH
-   2.1.2
+   2.1.4

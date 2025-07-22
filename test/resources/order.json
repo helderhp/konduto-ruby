@@ -16,8 +16,6 @@
     "address2": "CJ. 111",
     "city": "São Paulo",
     "country": "BR",
-    "lat": -23.565779450573725,
-    "lon": -46.691031683668946,
     "name": "Konduto",
     "state": "SP",
     "zip": "05406-200"
@@ -216,11 +214,11 @@
     "address2": "CJ. 111",
     "city": "São Paulo",
     "country": "BR",
-    "lat": -23.565779450573725,
-    "lon": -46.691031683668946,
     "name": "Konduto",
     "state": "SP",
-    "zip": "05406-200"
+    "zip": "05406-200",
+    "estimated_date": "2022-02-15T12:00:25Z",
+    "value": 20.0
   },
   "shipping_amount": 5.0,
   "shopping_cart":

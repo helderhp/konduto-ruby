@@ -28,7 +28,7 @@ FactoryGirl.define do
       sales_channel 'e-commerce'
       scheduled false
       customer factory: %i[konduto_customer complete], strategy: :build
-      shipping factory: :konduto_address, strategy: :build
+      shipping factory: :konduto_shipping_address, strategy: :build
       billing factory: :konduto_address, strategy: :build
       geolocation factory: :konduto_geolocation, strategy: :build
       payment { build_list :konduto_payment, 1, :credit_card }

@@ -12,12 +12,13 @@ class KondutoBase
   def initialize(*args)
     args[0]&.each do |key, value|
       unless value.nil?
-        if respond_to? "#{key}=".to_sym
-          send("#{key}=", value)
-        elsif key == 'class'
+        parameterized_key = KondutoUtils.parameterize_key(key)
+        if respond_to? "#{parameterized_key}=".to_sym
+          send("#{parameterized_key}=", value)
+        elsif parameterized_key == 'class'
           send('klass=', value)
         else
-          instance_variable_set("@#{key}", value)
+          instance_variable_set("@#{parameterized_key}", value)
         end
       end
     end

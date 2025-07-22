@@ -9,7 +9,7 @@ class KondutoOrder < KondutoBase
   has_many :triggered_decision_list, alias: :triggered_decision_list
   has_many :triggered_rule, alias: :triggered_rules
 
-  has_one :address, alias: :shipping
+  has_one :shipping_address, alias: :shipping
   has_one :address, alias: :billing
   has_one :customer
   has_one :seller

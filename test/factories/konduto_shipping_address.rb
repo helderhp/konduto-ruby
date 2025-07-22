@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 FactoryGirl.define do
-  factory :konduto_address do
+  factory :konduto_shipping_address do
     name 'Konduto'
     address1 'R. Teodoro Sampaio, 2393'
     address2 'CJ. 111'
@@ -9,5 +9,7 @@ FactoryGirl.define do
     city 'São Paulo'
     state 'SP'
     country 'BR'
+    estimated_date "2022-02-15T12:00:25Z"
+    value 20.0
   end
 end
