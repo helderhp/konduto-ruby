@@ -69,8 +69,8 @@ order.customer = customer
 
 ### Order parameters
 
-|  Parameter         | Description                                                                                                                                                                                      |
-|--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Parameter          | Description                                                                                                                                                                                      |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | id                 | (required) Unique identifier for each order.Max. 100 chars, alpha-numeric.                                                                                                                       |
 | visitor            | (optional) Visitor identifier obtained from our JavaScript.Max. 40 chars, alpha-numeric.                                                                                                         |
 | total_amount       | (required) Total order amount.Max. 10 chars, number.                                                                                                                                             |
@@ -95,8 +95,8 @@ order.customer = customer
 
 ### Customer information
 
-|  Parameter  | Description                                                                                                                                                     |
-|-------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Parameter   | Description                                                                                                                                                     |
+| ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | id          | (required) Unique customer identifier. It can be any value (sequential, document, email) as long as it is consistent with future orders.Max. 100 chars, string. |
 | name        | (required) Customer's full name.Max. 100 chars, string.                                                                                                         |
 | email       | (required) Customer’s e-mail address.Max. 100 chars, string.                                                                                                    |
@@ -114,141 +114,145 @@ order.customer = customer
 
 ### Payment information
 
-| Parameter       | Description                                                                                                                                                                                                                                                                 |
-|-----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| type            | (required) Payment method used by the customer. We currently support `credit`, `boleto`, `debit`, `transfer `and `voucher`.Max. 8 chars, string.                                                                                                                            |
-| status          | (required) The payment status returned by the card operator. It can be `approved` (approved), `declined` (declined) or `pending`(pending), if payment has not yet been made.Max. 8 chars, string.This field should only be sent for the payment type `payment.type=credit`  |
-| bin             | (optional) The first six credit card numbers are used to identify the type of card used.Max. 6 chars, string.This field should only be sent for the payment type `payment.type=credit`                                                                                      |
-| last4           | (optional) The last four digits of the credit card.Max. 4 chars, string.This field should only be sent for the payment type `payment.type=credit`                                                                                                                           |
-| amount          | (required) Total order amount.Max. 10 chars, number.                                                                                                                                                                                                                        |
-| expiration_date | (optional) Card’s expiration date in MMYYYY format.Max. 6 chars, string.This field should only be sent for the payment type `payment.type=credit`                                                                                                                           |
-| description     | (optional) Some information regarding the discount..Max. 100 chars, string.                                                                                                                                                                                                 |
+| Parameter       | Description                                                                                                                                                                                                                                                                |
+| --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| type            | (required) Payment method used by the customer. We currently support `credit`, `boleto`, `debit`, `transfer `and `voucher`.Max. 8 chars, string.                                                                                                                           |
+| status          | (required) The payment status returned by the card operator. It can be `approved` (approved), `declined` (declined) or `pending`(pending), if payment has not yet been made.Max. 8 chars, string.This field should only be sent for the payment type `payment.type=credit` |
+| bin             | (optional) The first six credit card numbers are used to identify the type of card used.Max. 6 chars, string.This field should only be sent for the payment type `payment.type=credit`                                                                                     |
+| last4           | (optional) The last four digits of the credit card.Max. 4 chars, string.This field should only be sent for the payment type `payment.type=credit`                                                                                                                          |
+| amount          | (required) Total order amount.Max. 10 chars, number.                                                                                                                                                                                                                       |
+| expiration_date | (optional) Card’s expiration date in MMYYYY format.Max. 6 chars, string.This field should only be sent for the payment type `payment.type=credit`                                                                                                                          |
+| description     | (optional) Some information regarding the discount..Max. 100 chars, string.                                                                                                                                                                                                |
 
 ### Billing address
 
-|  Parameter | Description                                                                 |
-|------------|-----------------------------------------------------------------------------|
-| name       | (optional) Cardholder’s name.Max. 100 chars, string.                        |
-| address1   | (optional) Customer’s invoice address with the bank.Max. 255 chars, string. |
-| address2   | (optional) Complement of the invoice address.Max. 255 chars, string.        |
-| city       | (optional) Cardholder’s city.Max. 100 chars, string.                        |
-| state      | (optional) Cardholder’s stateMax. 100 chars, string.                        |
-| zip        | (optional) Cardholder’s Zip Code.Max. 100 chars, string.                    |
-| country    | (optional) Cardholder’s country code. (ISO 3166-2).Max. 2 chars, string.    |
+| Parameter | Description                                                                 |
+| --------- | --------------------------------------------------------------------------- |
+| name      | (optional) Cardholder’s name.Max. 100 chars, string.                        |
+| address1  | (optional) Customer’s invoice address with the bank.Max. 255 chars, string. |
+| address2  | (optional) Complement of the invoice address.Max. 255 chars, string.        |
+| city      | (optional) Cardholder’s city.Max. 100 chars, string.                        |
+| state     | (optional) Cardholder’s stateMax. 100 chars, string.                        |
+| zip       | (optional) Cardholder’s Zip Code.Max. 100 chars, string.                    |
+| country   | (optional) Cardholder’s country code. (ISO 3166-2).Max. 2 chars, string.    |
 
 
 ### Shipping address
 
-|  Parameter | Description                                                                 |
-|------------|-----------------------------------------------------------------------------|
-| name       | (optional) Cardholder’s name.Max. 100 chars, string.                        |
-| address1   | (optional) Customer’s invoice address with the bank.Max. 255 chars, string. |
-| address2   | (optional) Complement of the invoice address.Max. 255 chars, string.        |
-| city       | (optional) Customer’s city.Max. 100 chars, string.                          |
-| state      | (optional) Customer’s status.Max. 100 chars, string.                        |
-| zip        | (optional) Customer’s zip code.Max. 100 chars, string.                      |
-| country    | (optional) Customer’s country code. (ISO 3166-2) .Max. 2 chars, string.     |
+| Parameter | Description                                                                 |
+| --------- | --------------------------------------------------------------------------- |
+| name      | (optional) Cardholder’s name.Max. 100 chars, string.                        |
+| address1  | (optional) Customer’s invoice address with the bank.Max. 255 chars, string. |
+| address2  | (optional) Complement of the invoice address.Max. 255 chars, string.        |
+| city      | (optional) Customer’s city.Max. 100 chars, string.                          |
+| state     | (optional) Customer’s status.Max. 100 chars, string.                        |
+| zip       | (optional) Customer’s zip code.Max. 100 chars, string.                      |
+| country   | (optional) Customer’s country code. (ISO 3166-2) .Max. 2 chars, string.     |
 
 ### Delivery
 
-|  Parameter              | Description                                                                                                                           |
-|-------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| delivery_company        | (optional) Adds the name of the company that will deliver the product to the customer. Example: `GFL` String, up to 100 chars.        |
-| delivery_method         | (optional) Details the type of withdrawal type, if applicable. Example: `retire_loja` String, up to 100 chars.                        |
-| estimated_shipping_date | (optional) Informs the estimated delivery date of the product. Example: `2021-05-06` String, format YYYY-MM-DDThh:mmZ (ISO 8601)      |
-| estimated_delivery_date | (optional) Informs the estimated date of withdrawal of the product. Example: `2021-05-06` String, format YYYY-MM-DDThh:mmZ (ISO 8601) |
+| Parameter               | Description                                                                                                                              |
+| ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| delivery_company        | (recommended) Adds the name of the company that will deliver the product to the customer. Example: `GFL` String, up to 100 chars.        |
+| delivery_method         | (recommended) Details the type of withdrawal type, if applicable. Example: `retire_loja` String, up to 100 chars.                        |
+| estimated_shipping_date | (recommended) Informs the estimated delivery date of the product. Example: `2021-05-06` String, format YYYY-MM-DDThh:mmZ (ISO 8601)      |
+| estimated_delivery_date | (recommended) Informs the estimated date of withdrawal of the product. Example: `2021-05-06` String, format YYYY-MM-DDThh:mmZ (ISO 8601) |
 
 ### External device
 
-|   Parameter  | Description                                                        |
-|--------------|--------------------------------------------------------------------|
-| fingerprint  | (optional) Browser identification.Max. 255 e min. 3, string        |
-| provider     | (optional) Provider typeMax. 225 e min. 2 chars, string.           |
-| category     | (optional) Category typeMax. 225 e min. 2 chars, string.           |
-| model        | (optional) Type of model usedMax. 225 chars, string.               |
-| platform     | (optional) Device type by customerMax. 225 e min. 2 chars, string. |
-| manufacturer | (optional) Which ManufacturerMax. 225 e min. 2 chars, string.      |
-| os           | (optional) What Operating SystemMax. 225 e min. 2 chars, string.   |
-| browser      | (optional) Which browserMax. 225 e min. 2 chars, string.           |
-| language     | (optional) Language usedString                                     |
+| Parameter    | Description                                                             |
+| ------------ | ----------------------------------------------------------------------- |
+| fingerprint  | (required) Browser identification. Max. 255 e min. 3, string            |
+| provider     | (recommended) Provider type. Max. 225 e min. 2 chars, string.           |
+| category     | (recommended) Category type. Max. 225 e min. 2 chars, string.           |
+| model        | (recommended) Type of model used. Max. 225 chars, string.               |
+| platform     | (recommended) Device type by customer. Max. 225 e min. 2 chars, string. |
+| manufacturer | (recommended) Which Manufacturer. Max. 225 e min. 2 chars, string.      |
+| os           | (recommended) What Operating System. Max. 225 e min. 2 chars, string.   |
+| browser      | (recommended) Which browser. Max. 225 e min. 2 chars, string.           |
+| language     | (recommended) Language used. Max 255, string.                           |
 
 ### Shopping cart
 
-|  Parameter   | Description                                                                                                              |
-|--------------|--------------------------------------------------------------------------------------------------------------------------|
-| sku          | (optional) SKU or inventory number of the product or service.Max. 100 chars, string.                                     |
-| product_code | (optional) Barcode or UPC product or service.Max. 100 chars, string.                                                     |
-| category     | (optional) Category code of the product purchased. See our list of categories for more information.Max. 4 chars, number. |
-| name         | (optional) Product or service name.Max. 100 chars, string.                                                               |
-| description  | (optional) Detailed description of the product or service.Max. 100 chars, string.                                        |
-| unit_cost    | (optional) Unit cost of this product or service.Max. 10 chars, number.                                                   |
-| quantity     | (optional) Number of units purchased.Max. 10 chars, number.                                                              |
-| discount     | (optional) Product discount value.Max. 10 chars, number.                                                                 |
-| created_at   | (optional) Date of publication of the product on the website, in YYYY-MM-DD format. (ISO 8601).Max. 10 chars, string.    |
+| Parameter               | Description                                                                                                                                                                                              |
+| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| sku                     | (recommended) SKU or inventory number of the product or service. Max. 100 chars, string.                                                                                                                 |
+| product_code            | (recommended) Barcode or UPC product or service. Max. 100 chars, string.                                                                                                                                 |
+| category                | (recommended) Category code of the product purchased. See our [list of categories](https://docs.konduto.com/reference/categorias-de-produtos-e-c%C3%B3digos) for more information. Max. 4 chars, number. |
+| name                    | (recommended) Product or service name. Max. 100 chars, string.                                                                                                                                           |
+| description             | (recommended) Detailed description of the product or service. Max. 100 chars, string.                                                                                                                    |
+| unit_cost               | (recommended) Unit cost of this product or service. Max. 10 chars, number.                                                                                                                               |
+| quantity                | (recommended) Number of units purchased. Max. 10 chars, number.                                                                                                                                          |
+| discount                | (recommended) Product discount value. Max. 10 chars, number.                                                                                                                                             |
+| created_at              | (recommended) Date of publication of the product on the website, in YYYY-MM-DD format. (ISO 8601). Max. 10 chars, string.                                                                                |
+| delivery_type           | (optional) Delivery type. Max. 255 chars, string.                                                                                                                                                        |
+| delivery_sla_in_minutes | (optional) Estimated delivery time in minutes. Min. 0 and max. 9999999999. Number.                                                                                                                       |
+| seller_id               | (optional) Seller identifier. Max. 255 chars, string.                                                                                                                                                    |
 
 
 ### Travel
 
-|  Parameters     | Description                                           |
-|-----------------|-------------------------------------------------------|
-| type            | (required) Type of trip. Currently `flight` or `bus`. |
-| expiration_date | (optional) Expiration date.Datetime                   |
-| departure       | (required) Object with departure information.         |
-| return          | (optional) Object with the return travel information. |
-| passengers      | (required) Array of objects with passengers’ data.    |
+| Parameters      | Description                                              |
+| --------------- | -------------------------------------------------------- |
+| type            | (required) Type of trip. Currently `flight` or `bus`.    |
+| expiration_date | (recommended) Expiration date. Datetime.                 |
+| departure       | (required) Object with departure information.            |
+| return          | (recommended) Object with the return travel information. |
+| passengers      | (required) Array of objects with passengers’ data.       |
 
 #### Departure/return
 
-|  Parameter            | Description                                                                                               |
-|-----------------------|-----------------------------------------------------------------------------------------------------------|
-| origin_city           | (required if type=bus) City of origin.Max 100 chars, string.                                              |
-| destination_city      | (required if type=bus) Destination city.Max 100 chars, string.                                            |
-| origin_airport        | (required if type=flight)IATA airport code to the airport of origin.Exactly 3 chars, string.              |
-| destination_airport   | (required if type=flight)IATA airport code to the airport of destiny.Exactly 3 chars, string.             |
-| date                  | (required) Date and time of boarding in UTC in YYYY-MM-DDThh:mmZ format (ISO 8601) Max. 17 chars, string. |
-| number_of_connections | (optional) Number of connections.Integer.                                                                 |
-| class                 | (optional) Class name, such as `economy`, `business` and `first`.Max. 8 chars, string.                    |
-| fare_basis            | (optional)  Class code.Max 20 chars, string.                                                              |
-| company               | (optional) Name of the airline company.Max. 255 chars, string.                                            |
+| Parameter             | Description                                                                                                |
+| --------------------- | ---------------------------------------------------------------------------------------------------------- |
+| origin_city           | (required if type=bus) City of origin. Max 100 chars, string.                                              |
+| destination_city      | (required if type=bus) Destination city. Max 100 chars, string.                                            |
+| origin_airport        | (required if type=flight) IATA airport code to the airport of origin. Exactly 3 chars, string.             |
+| destination_airport   | (required if type=flight) IATA airport code to the airport of destiny. Exactly 3 chars, string.            |
+| date                  | (required) Date and time of boarding in UTC in YYYY-MM-DDThh:mmZ format (ISO 8601). Max. 17 chars, string. |
+| number_of_connections | (recommended) Number of connections .Integer.                                                              |
+| class                 | (recommended) Class name, such as `economy`, `business` and `first`. Max. 8 chars, string.                 |
+| fare_basis            | (recommended) Class code. Max 20 chars, string.                                                            |
+| company               | (recommended) Name of the airline company. Max. 255 chars, string.                                         |
 
 #### Passenger
 
-|  Parameter        | Description                                                                                 |
-|-------------------|---------------------------------------------------------------------------------------------|
-| name              | (required) Passenger's full name.Max 100 chars, string.                                     |
-| document          | (required) Document number.Max 100 chars, string.                                           |
-| document_type     | (required) Document type. Can be `passport` or `id`.Max 8 chars, string.                    |
-| dob               | (optional) Passenger's date of birth in YYYY-MM-DD format (ISO 8601).Max. 10 chars, string. |
-| nationality       | (optional) Passenger's country of birth (ISO 3166-2).Max. 2 chars, string.                  |
-| frequent_traveler | (optional) Flag of frequent traveler..Boolean, default is `false`.                          |
-| special_needs     | (optional) Flag of frequent traveler.Boolean, default is `false`.                           |
+| Parameter         | Description                                                                                     |
+| ----------------- | ----------------------------------------------------------------------------------------------- |
+| name              | (required) Passenger's full name. Max 100 chars, string.                                        |
+| document          | (required) Document number. Max 100 chars, string.                                              |
+| document_type     | (required) Document type. Can be `passport` or `id`. Max 8 chars, string.                       |
+| dob               | (recommended) Passenger's date of birth in YYYY-MM-DD format (ISO 8601). Max. 10 chars, string. |
+| nationality       | (recommended) Passenger's country of birth (ISO 3166-2). Max. 2 chars, string.                  |
+| loyalty           | (optional) Passenger's loyalty program.                                                         |
+| frequent_traveler | (recommended) Flag of frequent traveler. Boolean, default is `false`.                           |
+| special_needs     | (recommended) Flag of frequent traveler. Boolean, default is `false`.                           |
 
 #### Loyalty
 
-| Parameter | Description                                                           |
-|-----------|-----------------------------------------------------------------------|
-| program   | Loyalty program type.Max. 255 chars, String Ex.: `smiles`             |
-| category  | Loyalty program category.Max. 255 chars, String Ex.: `gold`, `silver` |
+| Parameter | Description                                                            |
+| --------- | ---------------------------------------------------------------------- |
+| program   | Loyalty program type. Max. 255 chars, String Ex.: `smiles`             |
+| category  | Loyalty program category. Max. 255 chars, String Ex.: `gold`, `silver` |
 
 
 ### Hotel
 
-|  Parameter | Description                                                                     |
-|------------|---------------------------------------------------------------------------------|
-| name       | (required) Name of the hotel.Max. 100 chars, string.                            |
-| address1   | (optional) Hotel’s address.Max. 255 chars, string.                              |
-| address2   | (optional) Complement of the hotel’s address.Max. 255 chars, string.            |
-| city       | (optional) Hotel’s city.Max. 100 chars, string.                                 |
-| state      | (optional) Acronym for the hotel’ state.Max. 100 chars, string.                 |
-| zip        | (optional) Hotel’s zip code.Max. 100 chars, string.                             |
-| country    | (optional) Hotel’s country.Max. 2 chars, string.                                |
-| category   | (optional) Hotel’s category.Max. 100 chars, string.                             |
-| rooms      | (required) Object with information about the hotel’s roomsMax. 20 itens, array. |
+| Parameter | Description                                                                     |
+| --------- | ------------------------------------------------------------------------------- |
+| name      | (required) Name of the hotel.Max. 100 chars, string.                            |
+| address1  | (optional) Hotel’s address.Max. 255 chars, string.                              |
+| address2  | (optional) Complement of the hotel’s address.Max. 255 chars, string.            |
+| city      | (optional) Hotel’s city.Max. 100 chars, string.                                 |
+| state     | (optional) Acronym for the hotel’ state.Max. 100 chars, string.                 |
+| zip       | (optional) Hotel’s zip code.Max. 100 chars, string.                             |
+| country   | (optional) Hotel’s country.Max. 2 chars, string.                                |
+| category  | (optional) Hotel’s category.Max. 100 chars, string.                             |
+| rooms     | (required) Object with information about the hotel’s roomsMax. 20 itens, array. |
 
 #### Room
 
-|  Parameter       | Description                                                                                                    |
-|------------------|----------------------------------------------------------------------------------------------------------------|
+| Parameter        | Description                                                                                                    |
+| ---------------- | -------------------------------------------------------------------------------------------------------------- |
 | number           | (optional) Room’s number.Max. 100 chars, string.                                                               |
 | code             | (optional) Room’s codeMax. 100 chars, string.                                                                  |
 | type             | (optional) Room type.Max. 100 chars, string.                                                                   |
@@ -260,8 +264,8 @@ order.customer = customer
 
 #### Guest
 
-|  Parameter    | Description                                                                                                      |
-|---------------|------------------------------------------------------------------------------------------------------------------|
+| Parameter     | Description                                                                                                      |
+| ------------- | ---------------------------------------------------------------------------------------------------------------- |
 | name          | (required) Guest’s name.Max. 100 chars, string.                                                                  |
 | document      | (optional) Guest's document number.Max. 8 chars, string.                                                         |
 | document_type | (optional) Document used by the customer. We currently support `cpf`, `rg`, `passport`, `id` and `other`.string. |
@@ -271,40 +275,40 @@ order.customer = customer
 
 ### Event
 
-|  Parameter | Description                                                                                                                                    |
-|------------|------------------------------------------------------------------------------------------------------------------------------------------------|
-| name       | (required) Name of the event.Max. 255 chars, string.                                                                                           |
-| date       | (required) Date and time of the event in UTC in the YYYY-MM-DDThh:mmZ format (ISO 8601) Max. 17 chars, datetime, string.                       |
-| type       | (required) Type of the event. We currently support `show`, `theater`, `movies`, `party`, `festival`, `course`, `sports` and `corporate`string. |
-| subtype    | (optional) Detail of the event type.Max. 255 chars, string.                                                                                    |
-| venue      | (optional) Object with the location information of the event.                                                                                  |
-| tickets    | (optional) Array of objects with ticket data.                                                                                                  |
+| Parameter | Description                                                                                                                                    |
+| --------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| name      | (required) Name of the event.Max. 255 chars, string.                                                                                           |
+| date      | (required) Date and time of the event in UTC in the YYYY-MM-DDThh:mmZ format (ISO 8601) Max. 17 chars, datetime, string.                       |
+| type      | (required) Type of the event. We currently support `show`, `theater`, `movies`, `party`, `festival`, `course`, `sports` and `corporate`string. |
+| subtype   | (optional) Detail of the event type.Max. 255 chars, string.                                                                                    |
+| venue     | (optional) Object with the location information of the event.                                                                                  |
+| tickets   | (optional) Array of objects with ticket data.                                                                                                  |
 
 #### Venue
 
-|  Parameter | Description                                                           |
-|------------|-----------------------------------------------------------------------|
-| name       | (optional) Place’s nameMax. 255 chars, string.                        |
-| address    | (optional) Place’s addressMax. 255 chars, string.                     |
-| city       | (optional) Place’s cityMax. 255 chars, string.                        |
-| state      | (optional) Place’s stateMax. 100, string.                             |
-| country    | (optional) Place’s country pursuant to ISO 3166-2Max. 2 chars, string |
-| capacity   | (optional) Place’s capacityinteger.                                   |
+| Parameter | Description                                                           |
+| --------- | --------------------------------------------------------------------- |
+| name      | (optional) Place’s nameMax. 255 chars, string.                        |
+| address   | (optional) Place’s addressMax. 255 chars, string.                     |
+| city      | (optional) Place’s cityMax. 255 chars, string.                        |
+| state     | (optional) Place’s stateMax. 100, string.                             |
+| country   | (optional) Place’s country pursuant to ISO 3166-2Max. 2 chars, string |
+| capacity  | (optional) Place’s capacityinteger.                                   |
 
 #### Ticket
 
-|  Parameter | Note                                                                                                 |
-|------------|------------------------------------------------------------------------------------------------------|
-| id         | (optional) Unique ticket identifier.Max. 255 chars, string.                                          |
-| category   | (required) Unique ticket identifier.`student`, `senior`, `government`, `social` and `regular`.string |
-| section    | (optional) Unique ticket identifier.Max. 255 chars, string.                                          |
-| premium    | (required) Premium ticket indicator, receive only `true` or `false`.boolean                          |
-| attendee   | (required) Array of objects with participant data.                                                   |
+| Parameter | Note                                                                                                 |
+| --------- | ---------------------------------------------------------------------------------------------------- |
+| id        | (optional) Unique ticket identifier.Max. 255 chars, string.                                          |
+| category  | (required) Unique ticket identifier.`student`, `senior`, `government`, `social` and `regular`.string |
+| section   | (optional) Unique ticket identifier.Max. 255 chars, string.                                          |
+| premium   | (required) Premium ticket indicator, receive only `true` or `false`.boolean                          |
+| attendee  | (required) Array of objects with participant data.                                                   |
 
 #### Attendee
 
-|  Parameter    | Note                                                                                                                    |
-|---------------|-------------------------------------------------------------------------------------------------------------------------|
+| Parameter     | Note                                                                                                                    |
+| ------------- | ----------------------------------------------------------------------------------------------------------------------- |
 | name          | (optional) are described in the table below as well:Max. 255 chars, string.                                             |
 | document      | (required) Participant's document.Max. 100 chars, string.                                                               |
 | document_type | (optional) Type of document of the participant. We currently support `cpf`, `cnpj`, `rg`, `passport` and `other`.string |
@@ -312,8 +316,8 @@ order.customer = customer
 
 ### Vehicle
 
-|  Parâmetro   | Descrição                                                                                                                                                                 |
-|--------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Parâmetro    | Descrição                                                                                                                                                                 |
+| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | vid          | (optional) Unique vehicle identifier.Max. Min. 17 chars, string                                                                                                           |
 | renavam      | (optional) Renavan identification of the vehicle.Max. 11 chars, string                                                                                                    |
 | registration | (optional) Vehicle licence.Max. 15 chars, string                                                                                                                          |
@@ -325,37 +329,37 @@ order.customer = customer
 
 ##### Owner
 
-|  Parâmetro | Descrição                                                |
-|------------|----------------------------------------------------------|
-| name       | (optional) Vehicle owner's name.Max 255 chars, string.   |
-| tax_id     | (required) Vehicle owner document.Max 100 chars, string. |
+| Parâmetro | Descrição                                                |
+| --------- | -------------------------------------------------------- |
+| name      | (optional) Vehicle owner's name.Max 255 chars, string.   |
+| tax_id    | (required) Vehicle owner document.Max 100 chars, string. |
 
 ### Seller
 
-|  Parameter | Description                                                                                                         |
-|------------|---------------------------------------------------------------------------------------------------------------------|
+| Parameter  | Description                                                                                                         |
+| ---------- | ------------------------------------------------------------------------------------------------------------------- |
 | id         | (required)  Unique identifier of the seller within the Marketplace..Max. 100 chars, string.                         |
 | name       | (optional) Store or seller’s name.Max. 100 chars, string.                                                           |
 | created_at | (optional) Date of creation of the store in the Marketplace, in YYYY-MM-DD format (ISO 8601).Max. 10 chars, string. |
 
 ### Point of sale
 
-|  Parameter | Description                                                                                                       |
-|------------|-------------------------------------------------------------------------------------------------------------------|
-| id         | (required) Unique identifier of the physical store.Max. 100 chars, string.                                        |
-| name       | (required) Full name of the physical store.Max. 100 chars, string.                                                |
-| lat        | (optional) Latitude of the physical store. We currently use maximum: -90, maximum: 90Max. 10 characters, number.  |
-| long       | (optional) Length of the physical store. We currently use maximum: -180, maximum: 180.Max. 10 characters, number. |
-| address    | (optional) Physical store address.Max. 255 chars, string.                                                         |
-| city       | (optional)  Physical store city.Max. 100 chars, string.                                                           |
-| state      | (optional)  State of the physical store.Max. 100 chars, string.                                                   |
-| zip        | (optional)  Physical store zip code.Max. 100 chars, string.                                                       |
-| country    | (optional) Country code of holder (ISO 3166-2) .Max. 2 chars, string.                                             |
+| Parameter | Description                                                                                                       |
+| --------- | ----------------------------------------------------------------------------------------------------------------- |
+| id        | (required) Unique identifier of the physical store.Max. 100 chars, string.                                        |
+| name      | (required) Full name of the physical store.Max. 100 chars, string.                                                |
+| lat       | (optional) Latitude of the physical store. We currently use maximum: -90, maximum: 90Max. 10 characters, number.  |
+| long      | (optional) Length of the physical store. We currently use maximum: -180, maximum: 180.Max. 10 characters, number. |
+| address   | (optional) Physical store address.Max. 255 chars, string.                                                         |
+| city      | (optional)  Physical store city.Max. 100 chars, string.                                                           |
+| state     | (optional)  State of the physical store.Max. 100 chars, string.                                                   |
+| zip       | (optional)  Physical store zip code.Max. 100 chars, string.                                                       |
+| country   | (optional) Country code of holder (ISO 3166-2) .Max. 2 chars, string.                                             |
 
 ### Agent
 
-|  Parameter | Description                                                                                                                                    |
-|------------|------------------------------------------------------------------------------------------------------------------------------------------------|
+| Parameter  | Description                                                                                                                                    |
+| ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
 | id         | (mandatory) Seller's unique identifier.Max. 100 chars, string.                                                                                 |
 | login      | (optional) Seller login.Max. 100 chars, string.                                                                                                |
 | name       | (mandatory) Seller's full name.Max. 100 chars, string.                                                                                         |
@@ -367,8 +371,8 @@ order.customer = customer
 
 ### Origin account
 
-|  Parameter    | Description                                                                                                                                           |
-|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Parameter     | Description                                                                                                                                           |
+| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | id            | (optional) Unique account identifier.Max. 255 chars, string.                                                                                          |
 | key_type      | (optional) Type of key used to identify the account. We currently support `pix_cpf`, `pix_cnpj`, `pix_phone`, `pix_email`, `pix_evp`, `p2p` e `none`. |
 | key_value     | (optional) Key value used to identify the account.Max. 255 chars, string.                                                                             |
@@ -382,8 +386,8 @@ order.customer = customer
 
 ### Destination account
 
-|  Parameter    | Description                                                                                                                                          |
-|---------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Parameter     | Description                                                                                                                                          |
+| ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
 | id            | (optional) Unique account identifier.Max. 255 chars, string.                                                                                         |
 | key_type      | (optional) Type of key used to identify the account. We currently support `pix_cpf`, `pix_cnpj`, `pix_phone`, `pix_email`, `pix_evp`, `p2p` e `none` |
 | key_value     | (optional) Key value used to identify the account.Max. 255 chars, string.                                                                            |
@@ -437,10 +441,10 @@ order = konduto.get_order order_id # orderId is a String
 konduto.update_order_status(order, new_status, 'some comments');
 ```
 
-Parameter | Description
---- | ---
-status | _(required)_ New status for this transaction. Either `approved`, `declined` or `fraud`, when you have identified a fraud or chargeback.
-comments | _(required)_ Reason or comments about the status update.
+| Parameter | Description                                                                                                                             |
+| --------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| status    | _(required)_ New status for this transaction. Either `approved`, `declined` or `fraud`, when you have identified a fraud or chargeback. |
+| comments  | _(required)_ Reason or comments about the status update.                                                                                |
 
 ## Sending requests through a proxy
 To send requests through a proxy just build a new Konduto instance and set the proxy host passing the proxy url as parameters of `proxy=` method. If the proxy requires username and password, just set then at the proxy url you'll pass to `proxy=` method.
