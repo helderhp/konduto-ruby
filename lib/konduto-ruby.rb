@@ -76,7 +76,7 @@ class KondutoRuby
       order.id = order_id unless order.id
       order
     else
-      raise (JSON.parse(response.body)['message']).to_s
+      raise JSON.parse(response.body)['message'].to_s
     end
   end
 
@@ -87,7 +87,7 @@ class KondutoRuby
     if response.is_a? Net::HTTPSuccess
       KondutoOrder.new JSON.parse(response.entity)['order']
     else
-      raise (JSON.parse(response.body)['message']).to_s
+      raise JSON.parse(response.body)['message'].to_s
     end
   end
 
@@ -106,7 +106,7 @@ class KondutoRuby
       order.status = resposta['new_status']
       order
     else
-      raise (JSON.parse(response.body)['message']).to_s
+      raise JSON.parse(response.body)['message'].to_s
     end
   end
 
