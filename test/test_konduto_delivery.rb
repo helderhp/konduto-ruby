@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
 require 'Minitest/autorun'
-require 'factory_girl'
+require 'factory_bot'
 
 class KondutoDeliveryTest < Minitest::Test
-  include FactoryGirl::Syntax::Methods
+  include FactoryBot::Syntax::Methods
 
   def setup
     @json = load_resource('delivery.json')

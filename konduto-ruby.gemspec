@@ -17,10 +17,10 @@ Gem::Specification.new do |spec|
   spec.license      = 'MIT'
 
   # tests
-  spec.add_development_dependency  'factory_girl', '~> 4.9'
+  spec.add_development_dependency  'factory_bot', '~> 6.4'
   spec.add_development_dependency  'minitest', '~> 5.25'
   spec.add_development_dependency  'rake', '~> 12.3.3'
   spec.add_development_dependency  'rubocop', '~> 1.79'
   spec.add_development_dependency  'rubocop-minitest', '~> 0.38.1'
-  spec.add_development_dependency  'simplecov'
+  spec.add_development_dependency  'simplecov', '~> 0.22.0'
 end
