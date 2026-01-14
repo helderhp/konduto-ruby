@@ -12,7 +12,7 @@ module Konduto
       send(:define_method, "#{name}=".to_sym) do |value|
         klass = "Konduto#{model.to_s.gsub(/_/, ' ').split.map(&:capitalize).join('')}"
 
-        if value.instance_of? klass
+        if value.instance_of? Object.const_get(klass)
           instance_variable_set("@#{name}", value)
         elsif value.is_a? Hash
           instance_variable_set("@#{name}", Object.const_get(klass).new(value))
@@ -34,7 +34,7 @@ module Konduto
         temp_arr = []
 
         arr.each do |value|
-          if value.instance_of? klass
+          if value.instance_of? Object.const_get(klass)
             temp_arr << value
           elsif value.is_a? Hash
             temp_arr << Object.const_get(klass).new(value)

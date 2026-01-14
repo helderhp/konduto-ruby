@@ -1,14 +1,14 @@
 # frozen_string_literal: true
 
 require 'Minitest/autorun'
-require 'factory_girl'
+require 'factory_bot'
 require 'konduto-ruby'
 
 class KondutoOrderTest < Minitest::Test
-  include FactoryGirl::Syntax::Methods
+  include FactoryBot::Syntax::Methods
 
   def setup
-    FactoryGirl.reload
+    FactoryBot.reload
   end
 
   def test_valid
