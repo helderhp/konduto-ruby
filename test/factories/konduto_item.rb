@@ -15,9 +15,9 @@ FactoryBot.define do
       discount { -10.99 }
       image { 'https://product_image.test.com/123456789999.png' }
       created_at { Date.new(2022, 4, 25) }
-      delivery_type { "express delivery" }
+      delivery_type { 'express delivery' }
       delivery_sla_in_minutes { 50 }
-      seller_id { "11" }
+      seller_id { '11' }
     end
 
     trait :yellow_socks do

@@ -9,7 +9,7 @@ FactoryBot.define do
     city { 'São Paulo' }
     state { 'SP' }
     country { 'BR' }
-    estimated_date { "2022-02-15T12:00:25Z" }
+    estimated_date { '2022-02-15T12:00:25Z' }
     value { 20.0 }
     lat { -23.565779450573725 }
     lon { -46.691031683668946 }
