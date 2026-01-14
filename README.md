@@ -169,84 +169,88 @@ order.customer = customer
 
 ### Delivery
 
-| Parameter               | Description                                                                                                                           |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| delivery_company        | (optional) Adds the name of the company that will deliver the product to the customer. Example: `GFL` String, up to 100 chars.        |
-| delivery_method         | (optional) Details the type of withdrawal type, if applicable. Example: `retire_loja` String, up to 100 chars.                        |
-| estimated_shipping_date | (optional) Informs the estimated delivery date of the product. Example: `2021-05-06` String, format YYYY-MM-DDThh:mmZ (ISO 8601)      |
-| estimated_delivery_date | (optional) Informs the estimated date of withdrawal of the product. Example: `2021-05-06` String, format YYYY-MM-DDThh:mmZ (ISO 8601) |
+| Parameter               | Description                                                                                                                              |
+| ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| delivery_company        | (recommended) Adds the name of the company that will deliver the product to the customer. Example: `GFL` String, up to 100 chars.        |
+| delivery_method         | (recommended) Details the type of withdrawal type, if applicable. Example: `retire_loja` String, up to 100 chars.                        |
+| estimated_shipping_date | (recommended) Informs the estimated delivery date of the product. Example: `2021-05-06` String, format YYYY-MM-DDThh:mmZ (ISO 8601)      |
+| estimated_delivery_date | (recommended) Informs the estimated date of withdrawal of the product. Example: `2021-05-06` String, format YYYY-MM-DDThh:mmZ (ISO 8601) |
 
 ### External device
 
-| Parameter    | Description                                                        |
-| ------------ | ------------------------------------------------------------------ |
-| fingerprint  | (optional) Browser identification.Max. 255 e min. 3, string        |
-| provider     | (optional) Provider typeMax. 225 e min. 2 chars, string.           |
-| category     | (optional) Category typeMax. 225 e min. 2 chars, string.           |
-| model        | (optional) Type of model usedMax. 225 chars, string.               |
-| platform     | (optional) Device type by customerMax. 225 e min. 2 chars, string. |
-| manufacturer | (optional) Which ManufacturerMax. 225 e min. 2 chars, string.      |
-| os           | (optional) What Operating SystemMax. 225 e min. 2 chars, string.   |
-| browser      | (optional) Which browserMax. 225 e min. 2 chars, string.           |
-| language     | (optional) Language usedString                                     |
+| Parameter    | Description                                                             |
+| ------------ | ----------------------------------------------------------------------- |
+| fingerprint  | (required) Browser identification. Max. 255 e min. 3, string            |
+| provider     | (recommended) Provider type. Max. 225 e min. 2 chars, string.           |
+| category     | (recommended) Category type. Max. 225 e min. 2 chars, string.           |
+| model        | (recommended) Type of model used. Max. 225 chars, string.               |
+| platform     | (recommended) Device type by customer. Max. 225 e min. 2 chars, string. |
+| manufacturer | (recommended) Which Manufacturer. Max. 225 e min. 2 chars, string.      |
+| os           | (recommended) What Operating System. Max. 225 e min. 2 chars, string.   |
+| browser      | (recommended) Which browser. Max. 225 e min. 2 chars, string.           |
+| language     | (recommended) Language used. Max 255, string.                           |
 
 ### Shopping cart
 
-| Parameter    | Description                                                                                                              |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| sku          | (optional) SKU or inventory number of the product or service.Max. 100 chars, string.                                     |
-| product_code | (optional) Barcode or UPC product or service.Max. 100 chars, string.                                                     |
-| category     | (optional) Category code of the product purchased. See our list of categories for more information.Max. 4 chars, number. |
-| name         | (optional) Product or service name.Max. 100 chars, string.                                                               |
-| description  | (optional) Detailed description of the product or service.Max. 100 chars, string.                                        |
-| unit_cost    | (optional) Unit cost of this product or service.Max. 10 chars, number.                                                   |
-| quantity     | (optional) Number of units purchased.Max. 10 chars, number.                                                              |
-| discount     | (optional) Product discount value.Max. 10 chars, number.                                                                 |
-| created_at   | (optional) Date of publication of the product on the website, in YYYY-MM-DD format. (ISO 8601).Max. 10 chars, string.    |
+| Parameter               | Description                                                                                                                                                                                              |
+| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| sku                     | (recommended) SKU or inventory number of the product or service. Max. 100 chars, string.                                                                                                                 |
+| product_code            | (recommended) Barcode or UPC product or service. Max. 100 chars, string.                                                                                                                                 |
+| category                | (recommended) Category code of the product purchased. See our [list of categories](https://docs.konduto.com/reference/categorias-de-produtos-e-c%C3%B3digos) for more information. Max. 4 chars, number. |
+| name                    | (recommended) Product or service name. Max. 100 chars, string.                                                                                                                                           |
+| description             | (recommended) Detailed description of the product or service. Max. 100 chars, string.                                                                                                                    |
+| unit_cost               | (recommended) Unit cost of this product or service. Max. 10 chars, number.                                                                                                                               |
+| quantity                | (recommended) Number of units purchased. Max. 10 chars, number.                                                                                                                                          |
+| discount                | (recommended) Product discount value. Max. 10 chars, number.                                                                                                                                             |
+| created_at              | (recommended) Date of publication of the product on the website, in YYYY-MM-DD format. (ISO 8601). Max. 10 chars, string.                                                                                |
+| delivery_type           | (optional) Delivery type. Max. 255 chars, string.                                                                                                                                                        |
+| delivery_sla_in_minutes | (optional) Estimated delivery time in minutes. Min. 0 and max. 9999999999. Number.                                                                                                                       |
+| seller_id               | (optional) Seller identifier. Max. 255 chars, string.                                                                                                                                                    |
 
 
 ### Travel
 
-| Parameters      | Description                                           |
-| --------------- | ----------------------------------------------------- |
-| type            | (required) Type of trip. Currently `flight` or `bus`. |
-| expiration_date | (optional) Expiration date.Datetime                   |
-| departure       | (required) Object with departure information.         |
-| return          | (optional) Object with the return travel information. |
-| passengers      | (required) Array of objects with passengers’ data.    |
+| Parameters      | Description                                              |
+| --------------- | -------------------------------------------------------- |
+| type            | (required) Type of trip. Currently `flight` or `bus`.    |
+| expiration_date | (recommended) Expiration date. Datetime.                 |
+| departure       | (required) Object with departure information.            |
+| return          | (recommended) Object with the return travel information. |
+| passengers      | (required) Array of objects with passengers’ data.       |
 
 #### Departure/return
 
-| Parameter             | Description                                                                                               |
-| --------------------- | --------------------------------------------------------------------------------------------------------- |
-| origin_city           | (required if type=bus) City of origin.Max 100 chars, string.                                              |
-| destination_city      | (required if type=bus) Destination city.Max 100 chars, string.                                            |
-| origin_airport        | (required if type=flight)IATA airport code to the airport of origin.Exactly 3 chars, string.              |
-| destination_airport   | (required if type=flight)IATA airport code to the airport of destiny.Exactly 3 chars, string.             |
-| date                  | (required) Date and time of boarding in UTC in YYYY-MM-DDThh:mmZ format (ISO 8601) Max. 17 chars, string. |
-| number_of_connections | (optional) Number of connections.Integer.                                                                 |
-| class                 | (optional) Class name, such as `economy`, `business` and `first`.Max. 8 chars, string.                    |
-| fare_basis            | (optional)  Class code.Max 20 chars, string.                                                              |
-| company               | (optional) Name of the airline company.Max. 255 chars, string.                                            |
+| Parameter             | Description                                                                                                |
+| --------------------- | ---------------------------------------------------------------------------------------------------------- |
+| origin_city           | (required if type=bus) City of origin. Max 100 chars, string.                                              |
+| destination_city      | (required if type=bus) Destination city. Max 100 chars, string.                                            |
+| origin_airport        | (required if type=flight) IATA airport code to the airport of origin. Exactly 3 chars, string.             |
+| destination_airport   | (required if type=flight) IATA airport code to the airport of destiny. Exactly 3 chars, string.            |
+| date                  | (required) Date and time of boarding in UTC in YYYY-MM-DDThh:mmZ format (ISO 8601). Max. 17 chars, string. |
+| number_of_connections | (recommended) Number of connections .Integer.                                                              |
+| class                 | (recommended) Class name, such as `economy`, `business` and `first`. Max. 8 chars, string.                 |
+| fare_basis            | (recommended) Class code. Max 20 chars, string.                                                            |
+| company               | (recommended) Name of the airline company. Max. 255 chars, string.                                         |
 
 #### Passenger
 
-| Parameter         | Description                                                                                 |
-| ----------------- | ------------------------------------------------------------------------------------------- |
-| name              | (required) Passenger's full name.Max 100 chars, string.                                     |
-| document          | (required) Document number.Max 100 chars, string.                                           |
-| document_type     | (required) Document type. Can be `passport` or `id`.Max 8 chars, string.                    |
-| dob               | (optional) Passenger's date of birth in YYYY-MM-DD format (ISO 8601).Max. 10 chars, string. |
-| nationality       | (optional) Passenger's country of birth (ISO 3166-2).Max. 2 chars, string.                  |
-| frequent_traveler | (optional) Flag of frequent traveler..Boolean, default is `false`.                          |
-| special_needs     | (optional) Flag of frequent traveler.Boolean, default is `false`.                           |
+| Parameter         | Description                                                                                     |
+| ----------------- | ----------------------------------------------------------------------------------------------- |
+| name              | (required) Passenger's full name. Max 100 chars, string.                                        |
+| document          | (required) Document number. Max 100 chars, string.                                              |
+| document_type     | (required) Document type. Can be `passport` or `id`. Max 8 chars, string.                       |
+| dob               | (recommended) Passenger's date of birth in YYYY-MM-DD format (ISO 8601). Max. 10 chars, string. |
+| nationality       | (recommended) Passenger's country of birth (ISO 3166-2). Max. 2 chars, string.                  |
+| loyalty           | (optional) Passenger's loyalty program.                                                         |
+| frequent_traveler | (recommended) Flag of frequent traveler. Boolean, default is `false`.                           |
+| special_needs     | (recommended) Flag of frequent traveler. Boolean, default is `false`.                           |
 
 #### Loyalty
 
-| Parameter | Description                                                           |
-| --------- | --------------------------------------------------------------------- |
-| program   | Loyalty program type.Max. 255 chars, String Ex.: `smiles`             |
-| category  | Loyalty program category.Max. 255 chars, String Ex.: `gold`, `silver` |
+| Parameter | Description                                                            |
+| --------- | ---------------------------------------------------------------------- |
+| program   | Loyalty program type. Max. 255 chars, String Ex.: `smiles`             |
+| category  | Loyalty program category. Max. 255 chars, String Ex.: `gold`, `silver` |
 
 
 ### Hotel
