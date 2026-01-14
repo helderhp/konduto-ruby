@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-require 'minitest/autorun'
+require 'Minitest/autorun'
 require 'factory_girl'
 
-class KondutoDestinationAccountTest < MiniTest::Test
+class KondutoDestinationAccountTest < Minitest::Test
   include FactoryGirl::Syntax::Methods
 
   def test_serialization

@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
+# These lines must go first
 require 'factory_girl'
-require 'simplecov'            # These two lines must go first
+require 'simplecov'
 SimpleCov.start
 
 def load_resource(resource)

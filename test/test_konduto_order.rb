@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-require 'minitest/autorun'
+require 'Minitest/autorun'
 require 'factory_girl'
 require 'konduto-ruby'
 
-class KondutoOrderTest < MiniTest::Test
+class KondutoOrderTest < Minitest::Test
   include FactoryGirl::Syntax::Methods
 
   def setup

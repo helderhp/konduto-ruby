@@ -1,4 +1,4 @@
-require: rubocop-minitest
+plugins: rubocop-minitest
 
 AllCops:
   SuggestExtensions: false
@@ -21,5 +21,5 @@ Naming/FileName:
   Enabled: false
 Metrics/CyclomaticComplexity:
   Enabled: false
-Naming/PredicateName:
+Naming/PredicatePrefix:
   Enabled: false
