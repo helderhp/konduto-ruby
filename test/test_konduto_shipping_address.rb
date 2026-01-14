@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
 require 'minitest/autorun'
-require 'factory_girl'
+require 'factory_bot'
 
-class KondutoShippingAddressTest < MiniTest::Test
-  include FactoryGirl::Syntax::Methods
+class KondutoShippingAddressTest < Minitest::Test
+  include FactoryBot::Syntax::Methods
 
   def test_serialization
     address = build(:konduto_shipping_address)

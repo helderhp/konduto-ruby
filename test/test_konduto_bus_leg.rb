@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'Minitest/autorun'
+require 'minitest/autorun'
 require 'date'
 
 class TestKondutoBugLeg < Minitest::Test

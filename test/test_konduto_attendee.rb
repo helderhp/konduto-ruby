@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'Minitest/autorun'
+require 'minitest/autorun'
 require 'factory_bot'
 
 class KondutoAttendeeTest < Minitest::Test

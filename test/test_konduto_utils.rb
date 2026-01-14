@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
 require 'minitest/autorun'
-require 'factory_girl'
+require 'factory_bot'
 
-class KondutoUtilsTest < MiniTest::Test
-  include FactoryGirl::Syntax::Methods
+class KondutoUtilsTest < Minitest::Test
+  include FactoryBot::Syntax::Methods
 
   def test_parameterize_key_with_single_word
     assert_equal 'classe', KondutoUtils.parameterize_key('Classe')
