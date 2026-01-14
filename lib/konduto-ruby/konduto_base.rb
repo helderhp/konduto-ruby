@@ -69,4 +69,12 @@ class KondutoBase
   def defined_strftime_pattern(attr)
     send("#{attr.to_s.gsub(/^@/, '')}_strftime_pattern")
   end
+
+  def rename_attribute_on_hash(origin_name, dest_name, attr_as_hash)
+    unless attr_as_hash[origin_name].nil?
+      attr_as_hash[dest_name] = attr_as_hash[origin_name]
+      attr_as_hash.delete(origin_name)
+    end
+    attr_as_hash
+  end
 end

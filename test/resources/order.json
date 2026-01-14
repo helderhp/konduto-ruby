@@ -18,7 +18,9 @@
     "country": "BR",
     "name": "Konduto",
     "state": "SP",
-    "zip": "05406-200"
+    "zip": "05406-200",
+    "lat": -23.565779450573725,
+    "lon": -46.691031683668946
   },
   "currency": "USD",
   "customer":
@@ -217,8 +219,10 @@
     "name": "Konduto",
     "state": "SP",
     "zip": "05406-200",
-    "estimated_date": "2022-02-15T12:00:25Z",
-    "value": 20.0
+    "estimatedDate": "2022-02-15T12:00:25Z",
+    "value": 20.0,
+    "lat": -23.565779450573725,
+    "lon": -46.691031683668946
   },
   "shipping_amount": 5.0,
   "shopping_cart":
@@ -228,14 +232,15 @@
       "created_at": "2022-04-25",
       "description": "Male Green T-Shirt V Neck",
       "discount": -10.99,
+      "image": "https://product_image.test.com/123456789999.png",
       "name": "Green T-Shirt",
       "product_code": "123456789999",
       "quantity": 1.0,
       "sku": "9919023",
       "unit_cost": 1999.99,
-      "delivery_type": "express delivery",
-      "delivery_sla_in_minutes": 50,
-      "seller_id": "11"
+      "deliveryType": "express delivery",
+      "deliverySlaInMinutes": 50,
+      "sellerId": "11"
     },
     {
       "category": 202,
