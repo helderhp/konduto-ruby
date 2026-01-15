@@ -1,7 +1,7 @@
 {
   "id": "ABC123DEF",
   "balance": 250.0,
-  "key_type": "pix_phone", //todo verificar enum
+  "key_type": "pix_phone",
   "key_value": "+5511912341234",
   "bank_code": "00000000",
   "bank_name": "Banco do Brasil",

@@ -2,7 +2,7 @@
   {
     "name":"Tia Ana no Maracanã",
     "date":"2021-01-01T03:00:00Z",
-    "type":"show", //todo verificar enum
+    "type":"show",
     "subtype":"sertanejo",
     "venue":{
       "name":"Estádio do Maracanã",
@@ -15,7 +15,7 @@
     "tickets":[
       {
         "id": "123456",
-        "category":"regular", //todo verificar enum
+        "category":"regular",
         "premium":true,
         "section":"Pista Premium",
         "attendee":{

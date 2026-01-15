@@ -7,7 +7,7 @@
     "origin_city": "Guarulhos - SP",
     "destination_city": "Fortaleza - CE",
     "date": "2022-05-01",
-    "class": "economy", //todo verificar enum
+    "class": "economy",
     "number_of_connections": 0,
     "fare_basis": "A1",
     "company": "Gol"

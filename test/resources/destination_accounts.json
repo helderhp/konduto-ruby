@@ -1,7 +1,7 @@
 [
   {
     "id": "Conta 003",
-    "key_type": "pix_evp", //todo verificar enum
+    "key_type": "pix_evp",
     "key_value": "123e4567-e89b-12d3-a456-426655440000",
     "bank_code": "17298092",
     "bank_name": "Itaú BBA",
