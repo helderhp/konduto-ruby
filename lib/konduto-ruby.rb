@@ -54,7 +54,8 @@ class KondutoRuby
     headers = {
       'Authorization' => "Basic #{Base64.encode64(@api_key)}",
       'Content-Type' => 'application/json',
-      'Referer' => @endpoint.path
+      'Referer' => @endpoint.path,
+      'User-Agent' => "konduto-ruby/#{VERSION}"
     }
     http_method.initialize_http_header headers
     http_method.body = request_body
@@ -92,8 +93,11 @@ class KondutoRuby
   end
 
   def update_order_status(order, new_status, comments)
-    raise ArgumentError("Illegal status #{new_status}") unless KondutoOrderStatus.allowed_status.include? new_status
-    raise ArgumentError("Commets can't be nil") unless comments
+    unless KondutoOrderStatus.allowed_status.include? new_status
+      raise ArgumentError,
+            "Illegal status '#{new_status}', Allowed status #{KondutoOrderStatus.allowed_status}"
+    end
+    raise ArgumentError, "Commets can't be nil" unless comments
 
     put = Net::HTTP::Put.new(order_url(order.id))
     body = { status: new_status.downcase, comments: comments }.to_json
