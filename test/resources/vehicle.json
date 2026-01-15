@@ -8,6 +8,6 @@
     "tax_id": "123.123.123-12",
     "name": "Cicero"
   },
-  "type": "car", //todo verificar enum
+  "type": "car",
   "usage": "private"
 }
